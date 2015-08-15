@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=yes,
+		initial-scale=1.0" />
+
+	<title>FH Roomscanner</title>
+
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Roboto:700);
+		@import 'app.css';
+	</style>
+
+	<script>
+	// Redirect console if running from Evothings Workbench.
+	if (window.hyper) { console.log = hyper.log }
+	</script>
+</head>
+
+<body>
+	<section class="page">
+		<div class="content">
+			<div class="person">
+				<header class="person-header">
+					<img src="martin.jpg">
+					<h1 class="heading heading-brand" style="margin-bottom: 10px; padding-bottom: 0;">Martin</h1>
+					<h2 class="heading heading-secondary" style="margin-top: 10px;">UX Developer</h2>
+				</header>
+				<div class="person-info">
+					<div class="person-status">
+						<span class="heading heading-secondary h3">Huidige status</span>
+						<span class="heading heading-success heading-brand h1">Aanwezig</span>
+					</div>
+					<div class="person-location">
+						<!-- This shit actualy works -->
+						<span class="heading heading-secondary h3">Huidige ruimte</span>
+						<span class="heading heading-brand h1" id="person-location-field">searching...</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="lib/jquery.js"></script>
+	<script src="cordova.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
